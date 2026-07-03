@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+  }
+  * {
+    @apply border-slate-800;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-slate-900 border border-slate-800 rounded-xl p-5;
+  }
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-700 text-white font-medium px-4 py-2 rounded-lg transition-colors text-sm;
+  }
+  .btn-ghost {
+    @apply bg-transparent hover:bg-slate-800 text-slate-300 font-medium px-4 py-2 rounded-lg transition-colors text-sm border border-slate-700;
+  }
+  .badge-auto {
+    @apply inline-flex items-center gap-1 bg-emerald-500/10 text-emerald-400 text-xs font-medium px-2 py-0.5 rounded-full border border-emerald-500/20;
+  }
+  .badge-flagged {
+    @apply inline-flex items-center gap-1 bg-amber-500/10 text-amber-400 text-xs font-medium px-2 py-0.5 rounded-full border border-amber-500/20;
+  }
+  .badge-review {
+    @apply inline-flex items-center gap-1 bg-red-500/10 text-red-400 text-xs font-medium px-2 py-0.5 rounded-full border border-red-500/20;
+  }
+  .badge-processing {
+    @apply inline-flex items-center gap-1 bg-blue-500/10 text-blue-400 text-xs font-medium px-2 py-0.5 rounded-full border border-blue-500/20;
+  }
+  .badge-approved {
+    @apply inline-flex items-center gap-1 bg-emerald-500/10 text-emerald-400 text-xs font-medium px-2 py-0.5 rounded-full border border-emerald-500/20;
+  }
+  .badge-rejected {
+    @apply inline-flex items-center gap-1 bg-slate-500/10 text-slate-400 text-xs font-medium px-2 py-0.5 rounded-full border border-slate-500/20;
+  }
+}
