@@ -1,6 +1,12 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: '/api', timeout: 60000 })
+const API = import.meta.env.VITE_API_URL;
+
+
+const api = axios.create({
+  baseURL: `${API}/api`,
+  timeout: 60000,
+});
 
 // Invoices
 export const getInvoices = (status = null) =>
@@ -30,9 +36,14 @@ export const updateField = (id, field, value) =>
   api.patch(`/invoices/${id}/field`, null, { params: { field, value } }).then(r => r.data)
 
 // Export
-export const exportCsv = (id) => window.open(`/api/export/${id}/csv`, '_blank')
-export const exportJson = (id) => window.open(`/api/export/${id}/json`, '_blank')
-export const exportBatchCsv = (status = 'approved') => window.open(`/api/export/batch/csv?status=${status}`, '_blank')
+export const exportCsv = (id) =>
+  window.open(`${API}/api/export/${id}/csv`, "_blank");
+
+export const exportJson = (id) =>
+  window.open(`${API}/api/export/${id}/json`, "_blank");
+
+export const exportBatchCsv = (status = "approved") =>
+  window.open(`${API}/api/export/batch/csv?status=${status}`, "_blank");
 
 // Purchase Orders
 export const getPOs = () => api.get('/purchase-orders').then(r => r.data)
