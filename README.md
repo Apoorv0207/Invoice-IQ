@@ -145,7 +145,7 @@ transparency and auditability.
 
 ## Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard(2).png)
 
 ## Invoice Detail
 
